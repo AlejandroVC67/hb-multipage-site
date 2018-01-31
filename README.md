@@ -12,10 +12,10 @@ Each component should use the pug-loader to read the template and generate HTML.
 Each component should be implemented using the mobile first approach.
 Each component should be responsive using the following viewports:
 Small: 320px - 639px
-Medium: 640px - 1023px <<<<<<< HEAD
-Large: 1024px - Infinite =======
+Medium: 640px - 1023px 
+Large: 1024px - Infinite 
 Large: 1024px - ∞
-3d6e2090dc87df0bd968e824acd1b60dc304c2d9
+
 
 Components
 Main Menu
