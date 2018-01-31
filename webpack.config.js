@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+
 module.exports = {
   entry: './src/main.js',
   devtool: 'inline-source-map',
@@ -24,6 +25,23 @@ module.exports = {
             'sass-loader?sourceMap'
           ]
         })
+      },
+      {
+        // set up standard-loader as a preloader
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        loader: 'standard-loader',
+        exclude: /(node_modules|bower_components)/,
+        options: {
+          // Emit errors instead of warnings (default = false)
+          error: false,
+          // enable snazzy output (default = true)
+          snazzy: true,
+        }
+      },
+      {
+        test:  /\.pug$/,
+        loader: 'pug-loader'
       }
     ]
   },

@@ -1,4 +1,6 @@
-import testStyle from './test.scss'
+import './test.scss'
+import template from './test.pug'
+import data from './data.json'
 export class Test {
   constructor (node) {
     this.node = node
@@ -6,6 +8,6 @@ export class Test {
   }
 
   generateHTML (node) {
-    node.innerText = 'Random header here (:'
+    node.innerHTML = template(data)
   }
 }

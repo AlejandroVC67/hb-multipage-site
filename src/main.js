@@ -1,3 +1,5 @@
 import { Test } from './components/test.js'
 
-const title = new Test(document.querySelector('.wrapper'))
+/* eslint-disable */
+new Test(document.querySelector('.wrapper'))
+/* eslint-enable */
