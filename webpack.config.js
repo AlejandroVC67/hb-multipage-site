@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './[name]'
+    filename: './main.js'
   },
   module: {
 
@@ -46,14 +46,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        beautify: false,
-        ecma: 6,
-        compress: true,
-        comments: false
-      }
-    }),
     new StyleLintPlugin({}),
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({

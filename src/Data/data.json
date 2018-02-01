@@ -1,21 +1,33 @@
 {
-    "logo": {
-      "img": "",
-      "link": ""
+  "logo": {
+    "img": "Compnay Logo",
+    "link": "https://image.freepik.com/iconos-gratis/murcielago-con-las-alas-abiertas-logo-variante_318-46799.jpg"
+  },
+  "links": [
+    {
+      "label": "Link simple 1",
+      "href": "www.hola.com"
     },
-    "links": [
-      {
-        "label": "",
-        "href": ""
-      },
-      {
-        "label": "",
-        "links": [
-          {
-            "label": "",
-            "href": ""
-          }
-        ]
-      }
-    ]
-  }
+    {
+      "label": "Otro link simple",
+      "href": "www.hola2.com"
+    },
+    {
+      "label": "Un link simple más",
+      "href": "www.hola3.com"
+    },
+    {
+      "label": "casas",
+      "links": [
+        {
+          "label": "casa 1",
+          "href": "casita1.html"
+        },
+        {
+          "label": "casa 2",
+          "href": "casita2.html"
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import '../common/variables.scss'
 import '../common/responsive.scss'
 import './NavBar.scss'
 import data from '../../Data/data.json'
-import template from './Navbar.pug'
+import template from './nav-bar.pug'
 
 export class NavBar {
   constructor (node) {

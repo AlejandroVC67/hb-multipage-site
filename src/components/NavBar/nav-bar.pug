@@ -1,0 +1,19 @@
+span.nav-bar__menu 
+    button.nav-bar__menu__button
+        div
+        div
+        div        
+div.nav-bar__image-container
+  img(src="#{logo.link}", alt="#{logo.img}")
+ul.nav-bar__list
+  each element in links
+    if Object.keys(element).includes('href')
+      li.nav-bar__list-item
+        a(href="#{element.href}") #{element.label}
+    else
+      li.nav-bar__list-item  #{element.label}  
+        ul.nav-bar__dropdown-list
+          each subElement in element.links
+            li.nav-bar__dropdown-list-item
+              a(href="#{subElement.href}") #{subElement.label}
+    
