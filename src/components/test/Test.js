@@ -1,6 +1,6 @@
 import './test.scss'
 import template from './test.pug'
-import data from './data.json'
+import data from '../Data/data.json'
 export class Test {
   constructor (node) {
     this.node = node
