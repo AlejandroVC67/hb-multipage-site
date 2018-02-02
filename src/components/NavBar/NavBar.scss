@@ -1,8 +1,25 @@
 .nav-bar{
 	width: 100%;
-	height: 6vh;
-	border: 1px solid;
+	height: 7vh;
+	background-color: #143A52;
 	display: flex;
+	&__menu{
+    width: 5%;
+    height: 6vh;
+		&__button{
+			width: 100%;
+			height: 100%;
+			border: none;
+			background: no-repeat;
+			& > div{
+				border: 1px solid;
+				width: 25px;
+				margin-bottom: 5px;
+				margin-left: 20%;
+				color: white;
+			}
+		}
+	}
 	&__image-container{
 		width: 30%;
     margin-left: 33vw;
@@ -15,25 +32,72 @@
     position: absolute;
     flex-direction: column;
 		width: 100%;
-		padding-top: 6vh;
+    background-color: #6E828A;
+		margin-left: -500vh;
+    transition: margin-left 0.5s;
+		top: 6vh;
     justify-content: center;
-    height: 100vh;
+    height: 94vh;
 		align-items: center;
-		&-item{
-			border: 1px solid;
+		&--active{
+			margin-left: 0
 		}
-	}
-	&__menu{
-		width: 12%;
-		&__button{
-			width: 100%;
-			height: 100%;
-			& > div{
-				border: 1px solid;
-				width: 25px;
-				margin-bottom: 5px;
-				margin-left: 20%;
+		&-item{
+			margin-bottom: 50px;
+			font-size: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			&-container{
+				display: flex;
+				& > span {
+					display: flex;
+					width: 30px;
+					& > button {
+						display: flex;
+						width: 30px;
+						height: 33px;
+						border: none;
+						background: no-repeat;
+						align-items: center;
+						justify-content: center;
+						& > div {
+							border: 1px solid;
+							margin-right: 5px;
+							height: 15px;
+							max-width: 100%;
+							&:first-child{
+								transform: rotate(-34deg);
+							}
+							&:last-child{
+								transform: rotate(34deg);
+							}
+						}
+					}
+				}
+			}
+			& > a {
+				text-align: center;
+				text-decoration: none;
 			}
 		}
 	}
+	&__dropdown-list{
+		will-change: height;
+    overflow: hidden;
+    height: 0;
+		transition: height .2s ease-in-out;
+		margin-left: 5px;
+		&--active{
+			height: auto;
+		}
+		& > li{
+			& > a {
+				text-decoration: none;
+			}
+		}
+	}
+
 }
