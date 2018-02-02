@@ -28,6 +28,19 @@
           "href": "casita2.html"
         }
       ]
+    },
+    {
+      "label": "aptos",
+      "links": [
+        {
+          "label": "apto 1",
+          "href": "casita1.html"
+        },
+        {
+          "label": "apto 2",
+          "href": "casita2.html"
+        }
+      ]
     }
   ]
 }

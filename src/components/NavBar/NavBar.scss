@@ -4,7 +4,7 @@
 	background-color: #143A52;
 	display: flex;
 	&__menu{
-    width: 5%;
+		width: 15%;
     height: 6vh;
 		&__button{
 			width: 100%;
@@ -34,7 +34,7 @@
 		width: 100%;
     background-color: #6E828A;
 		margin-left: -500vh;
-    transition: margin-left 0.5s;
+    transition: margin-left 2.1s;
 		top: 6vh;
     justify-content: center;
     height: 94vh;
@@ -52,29 +52,39 @@
 			font-weight: bold;
 			&-container{
 				display: flex;
-				& > span {
+				&-leftArrow{
+					transform: rotate(34deg);
+				}
+				&-rightArrow{
+					transform: rotate(-34deg);
+				}
+				&-button{
+					border: none;
+					background: no-repeat;
 					display: flex;
-					width: 30px;
-					& > button {
+					& > span {
 						display: flex;
 						width: 30px;
-						height: 33px;
-						border: none;
-						background: no-repeat;
 						align-items: center;
 						justify-content: center;
-						& > div {
-							border: 1px solid;
-							margin-right: 5px;
-							height: 15px;
-							max-width: 100%;
-							&:first-child{
-								transform: rotate(-34deg);
+							& > div {
+								border: 1px solid;
+								margin-right: 5px;
+								height: 15px;
+								max-width: 100%;
+								&:first-child{
+									transform: rotate(-34deg);
+									&.leftArrow--active{
+										transform: rotate(34deg);
+									}
+								}
+								&:last-child{
+									transform: rotate(34deg);
+									&.rightArrow--active{
+										transform: rotate(-34deg);
+									}
+								}
 							}
-							&:last-child{
-								transform: rotate(34deg);
-							}
-						}
 					}
 				}
 			}
@@ -99,5 +109,5 @@
 			}
 		}
 	}
-
 }
+

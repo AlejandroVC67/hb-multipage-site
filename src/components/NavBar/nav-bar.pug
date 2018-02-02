@@ -12,13 +12,13 @@ ul.nav-bar__list
         a(href="#{element.href}") #{element.label}
     else
       div.nav-bar__list-item-container
-        li.nav-bar__list-item  #{element.label}  
-          ul.nav-bar__dropdown-list
-            each subElement in element.links
-              li
-                a(href="#{subElement.href}") #{subElement.label}
-        span
-          button
+        button.nav-bar__list-item-container-button
+          li.nav-bar__list-item  #{element.label}  
+            ul.nav-bar__dropdown-list
+              each subElement in element.links
+                li
+                  a(href="#{subElement.href}") #{subElement.label}
+          span
             div
             div
     
