@@ -8,6 +8,7 @@ export class NavBarModel {
     this.elements.dropDownList = this.node.querySelectorAll('.nav-bar__dropdown-list')
     this.setMenuAction(this.elements.menu, this.elements.displayer)
     this.setDropDownAction(this.elements.dropDownButton, this.elements.dropDownList)
+    this.currentDropdown = undefined
   }
   static states () {
     return {
@@ -26,7 +27,21 @@ export class NavBarModel {
       element.addEventListener('click', () => {
         const index = Array.from(dropDownButton).indexOf(element)
         this.changeArrows(element, index)
-        this.elements.dropDownList[index].classList.toggle('nav-bar__dropdown-list--active')
+        if (this.currentDropdown === undefined) {
+          this.currentDropdown = index
+          console.log('debí pasar acá al inicio')
+        }
+        if (index === this.currentDropdown) {
+          console.log('debí pasar acá al repetir')
+          this.elements.dropDownList[this.currentDropdown].classList.toggle('nav-bar__dropdown-list--active')
+          console.log(this.currentDropdown)
+        } else {
+          console.log(this.currentDropdown, index)
+          console.log('debí pasar acá al escoger una diferente')
+          this.elements.dropDownList[this.currentDropdown].classList.remove('nav-bar__dropdown-list--active')
+          this.elements.dropDownList[index].classList.add('nav-bar__dropdown-list--active')
+          this.currentDropdown = index
+        }
       })
     })
   }
@@ -34,7 +49,5 @@ export class NavBarModel {
   changeArrows (element, index) {
     element.children[1].children[0].classList.toggle('leftArrow--active')
     element.children[1].children[1].classList.toggle('rightArrow--active')
-    console.log(element.children[1].children[0])
-    console.log(element.children[1].children[1])
   }
 }
