@@ -4,21 +4,22 @@ span.nav-bar__menu
         div.nav-bar__menu__button-line        
         div.nav-bar__menu__button-line                  
 div.nav-bar__image-container
-  img(src="#{logo.link}", alt="#{logo.img}")
+  img(src=logo.link, alt=logo.img)
 ul.nav-bar__list
   each element in links
     if Object.keys(element).includes('href')
-      li.nav-bar__list-item
-        a(href="#{element.href}") #{element.label}
+      div
+        li.nav-bar__list-item
+          a(href=element.href) #{element.label}
     else
-      div.nav-bar__list-item-container
-        button.nav-bar__list-item-container-button
-          li.nav-bar__list-item  #{element.label}  
-            ul.nav-bar__dropdown-list
-              each subElement in element.links
-                li
-                  a(href="#{subElement.href}") #{subElement.label}
+        div.nav-bar__list-item-container
+          li.nav-bar__list-item  #{element.label}
+              ul.nav-bar__dropdown-list
+                each subElement in element.links
+                  li
+                    a(href=subElement.href) #{subElement.label}
           span
             div
-            div
-    
+            div  
+
+

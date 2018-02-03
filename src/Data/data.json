@@ -1,20 +1,12 @@
 {
   "logo": {
     "img": "Compnay Logo",
-    "link": "https://image.freepik.com/iconos-gratis/murcielago-con-las-alas-abiertas-logo-variante_318-46799.jpg"
+    "link": "https://png.icons8.com/metro/1600/batman-new.png"
   },
   "links": [
     {
       "label": "Home",
-      "href": "www.hola.com"
-    },
-    {
-      "label": "Gallery",
-      "href": "www.hola2.com"
-    },
-    {
-      "label": "Contact",
-      "href": "www.hola3.com"
+      "href": "www.holamundo.co"
     },
     {
       "label": "Products",
@@ -26,8 +18,20 @@
         {
           "label": "Random Product2",
           "href": "casita2.html"
+        },
+        {
+          "label": "Random Product3",
+          "href": "casita1.html"
+        },
+        {
+          "label": "Random Product4",
+          "href": "casita2.html"
         }
       ]
+    },
+    {
+      "label": "Gallery",
+      "href": "www.hola2.com"
     },
     {
       "label": "Other Pages",
@@ -37,10 +41,14 @@
           "href": "casita1.html"
         },
         {
-          "label": "Random page2",
+          "label": "Random page",
           "href": "casita2.html"
         }
       ]
+    },
+    {
+      "label": "Contact",
+      "href": "www.hola3.com"
     }
   ]
 }

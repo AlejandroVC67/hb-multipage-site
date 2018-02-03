@@ -1,7 +1,4 @@
-import '../common/reset.scss'
-import '../common/variables.scss'
-import '../common/responsive.scss'
-import './NavBar.scss'
+import '../common/main.scss'
 import data from '../../Data/data.json'
 import template from './nav-bar.pug'
 
