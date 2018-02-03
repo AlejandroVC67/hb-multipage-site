@@ -4,7 +4,7 @@ export class NavBarModel {
     this.elements = {}
     this.elements.menu = this.node.querySelector('.nav-bar__menu__button')
     this.elements.displayer = this.node.querySelector('.nav-bar__list')
-    this.elements.dropDown = this.node.querySelectorAll('.nav-bar__list-item-container')
+    this.elements.dropDown = this.node.querySelectorAll('.nav-bar__list-container')
     console.log(this.elements.dropDown)
     this.elements.dropDownList = this.node.querySelectorAll('.nav-bar__dropdown-list')
     this.setMenuAction(this.elements.menu, this.elements.displayer)

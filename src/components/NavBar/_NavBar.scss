@@ -41,6 +41,9 @@
     justify-content: center;
     height: 94vh;
 		align-items: center;
+		&--active{
+			margin-left: 0
+		}
 		@include large{
 			flex-direction: unset;
 			position: unset;
@@ -55,10 +58,7 @@
 			justify-content: center;
 			&:hover{
 				background-color: #CDE3EB;
-			}
-		}
-		&--active{
-			margin-left: 0
+			 }
 		}
 		&-item{
 			margin-bottom: 50px;
@@ -67,62 +67,61 @@
 			@include large{
 				margin-bottom: 0;
 			}
-			&-dropdown{
-				display: flex;
+			& > a {
+				text-align: center;
+				text-decoration: none;
 			}
-			 &-container{
-				 display: flex;
-				 width: 100%;
-				 justify-content: center;
-				 &:hover{
-					background-color: #CDE3EB;					 
-				 }
-				 @include large{
-					align-items: center;
-				 }
-				 & > span {
-					display: flex;
-					width: 30px;
-					margin-top: 8px;
-					justify-content: center;
-					position: absolute;
-					margin-left: 100px;
-					@include large{
-						position: unset;
-						margin-left: 0;
-					}
-						& > div {
-							border: 1px solid;
-							margin-right: 5px;
-							height: 15px;
-							max-width: 100%;
-							&:first-child{
-								transform: rotate(-34deg);
-								&.leftArrow--active{
-									transform: rotate(34deg);
-								}
-							}
-							&:last-child{
-								transform: rotate(34deg);
-								&.rightArrow--active{
-									transform: rotate(-34deg);
-								}
-							}
-						}
-				}
-			 }
-			 & > a {
-			 	text-align: center;
-			 	text-decoration: none;
-			 }
 		}
+		&-container{
+			&:hover{
+				background-color: #CDE3EB;
+			}
+			@include large{
+			align-items: center;
+			}
+			& > span {
+				display: flex;
+				width: 30px;
+				margin-top: 8px;
+				justify-content: center;
+				position: absolute;
+				margin-left: 100px;
+			@include large{
+				position: unset;
+				margin-left: 0;
+			}
+			& > span {
+				border: 1px solid;
+				margin-right: 5px;
+				height: 15px;
+				max-width: 100%;
+				&:first-child{
+						transform: rotate(-34deg);
+					&.leftArrow--active{
+						transform: rotate(34deg);
+					}
+				}
+				&:last-child{
+					transform: rotate(34deg);
+					&.rightArrow--active{
+						transform: rotate(-34deg);
+					}
+				}
+			}
+			}
 	}
+}
 	&__dropdown-list{
 		will-change: height;
     overflow: hidden;
     height: 0;
 		transition: height .2s ease-in-out;
 		margin-left: 5px;
+		@include large{
+			position: absolute;
+			margin-top: 20px;
+			margin-left: -4px;
+		}
 		&--active{
 			height: auto;
 		}

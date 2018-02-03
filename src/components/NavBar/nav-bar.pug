@@ -12,14 +12,14 @@ ul.nav-bar__list
         li.nav-bar__list-item
           a(href=element.href) #{element.label}
     else
-        div.nav-bar__list-item-container
+        div.nav-bar__list-container
           li.nav-bar__list-item  #{element.label}
               ul.nav-bar__dropdown-list
                 each subElement in element.links
                   li
                     a(href=subElement.href) #{subElement.label}
           span
-            div
-            div  
+            span
+            span  
 
 
