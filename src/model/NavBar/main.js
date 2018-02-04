@@ -5,7 +5,6 @@ export class NavBarModel {
     this.elements.menu = this.node.querySelector('.nav-bar__menu__button')
     this.elements.displayer = this.node.querySelector('.nav-bar__list')
     this.elements.dropDown = this.node.querySelectorAll('.nav-bar__list-container')
-    console.log(this.elements.dropDown)
     this.elements.dropDownList = this.node.querySelectorAll('.nav-bar__dropdown-list')
     this.setMenuAction(this.elements.menu, this.elements.displayer)
     this.setDropDownAction(this.elements.dropDown, this.elements.dropDownList)
@@ -17,10 +16,16 @@ export class NavBarModel {
     }
   }
 
-  setMenuAction (menuButton, itemsDisplayer) {
-    menuButton.addEventListener('click', () => {
+  setMenuAction (buttonMenu, itemsDisplayer) {
+    buttonMenu.addEventListener('click', () => {
+      this.animateMenu(this.elements.menu)
       itemsDisplayer.classList.toggle('nav-bar__list--active')
     })
+  }
+
+  animateMenu (buttonMenu) {
+    buttonMenu.children[0].classList.toggle('first-element--active')
+    buttonMenu.children[2].classList.toggle('last-element--active')
   }
 
   setDropDownAction (dropDownTrigger) {
