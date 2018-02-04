@@ -63,11 +63,11 @@
 		margin-left: -500vh;
     transition: margin-left 2.1s;
 		top: 6vh;
-    justify-content: center;
 		min-height: 94vh;
+    justify-content: center;
 		align-items: center;
 		&--active{
-			margin-left: 0
+			margin-left: 0;
 		}
 		@include large{
 			flex-direction: unset;
