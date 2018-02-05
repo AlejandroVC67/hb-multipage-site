@@ -1,7 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-console.log('holi estoy en common')
 module.exports = {
   entry: './src/main.js',
   output: {

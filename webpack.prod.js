@@ -3,7 +3,6 @@ const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-console.log('holi estoy en prod')
 module.exports = merge(common, {
   module: {
 
