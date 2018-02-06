@@ -4,13 +4,13 @@ span.nav-bar__menu
         div.nav-bar__menu__button-middle      
         div.nav-bar__menu__button-last
 div.nav-bar__image-container
-  img(src=logo.link, alt=logo.img)
+  img.nav-bar__image(src=logo.link, alt=logo.img)
 ul.nav-bar__list
   each element in links
     if Object.keys(element).includes('href')
       div
         li.nav-bar__list-item
-          a(href=element.href) #{element.label}
+          a.nav-bar__list-item-element(href=element.href) #{element.label}
     else
         div.nav-bar__list-container
           li.nav-bar__list-item  #{element.label}

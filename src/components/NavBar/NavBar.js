@@ -1,4 +1,4 @@
-import '../common/main.scss'
+import './_NavBar.scss'
 import data from '../../Data/data.json'
 import template from './nav-bar.pug'
 
@@ -20,6 +20,16 @@ export class NavBar {
     this.node.innerHTML = template(data)
   }
 
+  static get states () {
+    return {
+      firstArrowActive: `nav-bar__menu__button-first--active`,
+      lastArrowActive: `nav-bar__menu__button-last--active`,
+      dropDownActive: `nav-bar__dropdown-list--active`,
+      leftArrowActive: `leftArrow--active`,
+      rightArrowActive: `rightArrow--active`
+    }
+  }
+
   setMenuAction (buttonMenu, itemsDisplayer) {
     buttonMenu.addEventListener('click', () => {
       this.animateMenu()
@@ -30,8 +40,8 @@ export class NavBar {
   animateMenu () {
     this.elements.firstArrow = this.node.querySelector('.nav-bar__menu__button-first')
     this.elements.lastArrow = this.node.querySelector('.nav-bar__menu__button-last')
-    this.elements.firstArrow.classList.toggle('nav-bar__menu__button-first--active')
-    this.elements.lastArrow.classList.toggle('nav-bar__menu__button-last--active')
+    this.elements.firstArrow.classList.toggle(NavBar.states.firstArrowActive)
+    this.elements.lastArrow.classList.toggle(NavBar.states.lastArrowActive)
   }
 
   setDropDownAction (dropDownTrigger) {
@@ -43,10 +53,10 @@ export class NavBar {
           this.currentDropdown = index
         }
         if (index === this.currentDropdown) {
-          this.elements.dropDownList[this.currentDropdown].classList.toggle('nav-bar__dropdown-list--active')
+          this.elements.dropDownList[this.currentDropdown].classList.toggle(NavBar.states.dropDownActive)
         } else {
-          this.elements.dropDownList[this.currentDropdown].classList.remove('nav-bar__dropdown-list--active')
-          this.elements.dropDownList[index].classList.add('nav-bar__dropdown-list--active')
+          this.elements.dropDownList[this.currentDropdown].classList.remove(NavBar.states.dropDownActive)
+          this.elements.dropDownList[index].classList.add(NavBar.states.dropDownActive)
           this.currentDropdown = index
         }
       })
@@ -54,7 +64,7 @@ export class NavBar {
   }
 
   changeArrows (element, index) {
-    element.children[1].children[0].classList.toggle('leftArrow--active')
-    element.children[1].children[1].classList.toggle('rightArrow--active')
+    element.querySelectorAll('.nav-bar__arrow-container-item')[0].classList.toggle(NavBar.states.leftArrowActive)
+    element.querySelectorAll('.nav-bar__arrow-container-item')[1].classList.toggle(NavBar.states.rightArrowActive)
   }
 }
