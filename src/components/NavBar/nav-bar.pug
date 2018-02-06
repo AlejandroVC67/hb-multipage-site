@@ -1,8 +1,8 @@
 span.nav-bar__menu 
     button.nav-bar__menu__button
-        div
-        div      
-        div               
+        div.nav-bar__menu__button-first
+        div.nav-bar__menu__button-middle      
+        div.nav-bar__menu__button-last
 div.nav-bar__image-container
   img(src=logo.link, alt=logo.img)
 ul.nav-bar__list
@@ -18,8 +18,8 @@ ul.nav-bar__list
                 each subElement in element.links
                   li
                     a(href=subElement.href) #{subElement.label}
-          span
-            span
-            span  
+          span.nav-bar__arrow-container
+            span.nav-bar__arrow-container-item
+            span.nav-bar__arrow-container-item
 
 

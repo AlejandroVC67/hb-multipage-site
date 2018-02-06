@@ -13,7 +13,7 @@ export class NavBar {
     this.elements.dropDownList = this.node.querySelectorAll('.nav-bar__dropdown-list')
     this.setMenuAction(this.elements.menu, this.elements.displayer)
     this.setDropDownAction(this.elements.dropDown, this.elements.dropDownList)
-    this.currentDropdown = undefined
+    this.currentDropdown = null
   }
 
   generateHTML () {
@@ -22,14 +22,16 @@ export class NavBar {
 
   setMenuAction (buttonMenu, itemsDisplayer) {
     buttonMenu.addEventListener('click', () => {
-      this.animateMenu(this.elements.menu)
+      this.animateMenu()
       itemsDisplayer.classList.toggle('nav-bar__list--active')
     })
   }
 
-  animateMenu (buttonMenu) {
-    buttonMenu.children[0].classList.toggle('first-element--active')
-    buttonMenu.children[2].classList.toggle('last-element--active')
+  animateMenu () {
+    this.elements.firstArrow = this.node.querySelector('.nav-bar__menu__button-first')
+    this.elements.lastArrow = this.node.querySelector('.nav-bar__menu__button-last')
+    this.elements.firstArrow.classList.toggle('nav-bar__menu__button-first--active')
+    this.elements.lastArrow.classList.toggle('nav-bar__menu__button-last--active')
   }
 
   setDropDownAction (dropDownTrigger) {
@@ -37,7 +39,7 @@ export class NavBar {
       element.addEventListener('click', () => {
         const index = Array.from(dropDownTrigger).indexOf(element)
         this.changeArrows(element, index)
-        if (this.currentDropdown === undefined) {
+        if (this.currentDropdown === null) {
           this.currentDropdown = index
         }
         if (index === this.currentDropdown) {

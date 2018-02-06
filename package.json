@@ -4,7 +4,7 @@
   "description": "This exercise will help you to have a better understanding of the correct structure of a web project.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server webpack.common.js",
+    "start": "webpack-dev-server",
     "build": "webpack"
   },
   "repository": {

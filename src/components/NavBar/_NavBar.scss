@@ -16,33 +16,35 @@
 			height: 100%;
 			border: none;
 			background: no-repeat;
-			& > :first-child{
+			&-first{
 				border: 1px solid;
 				width: 25px;
 				margin-bottom: 5px;
 				margin-left: 20%;
 				color: white;
 				transition: transform 2.0s;
-				&.first-element--active{
+				&--active{
 					transform: rotate(-30deg) scale(.5) translateX(-14px);
+
 				}
 			}
-			& > :nth-child(2){
+			&-middle{
 				border: 1px solid;
 				width: 25px;
 				margin-bottom: 5px;
 				margin-left: 20%;
 				color: white;
 			}
-			& > :last-child{
+			&-last{
 				border: 1px solid;
 				width: 25px;
 				margin-bottom: 5px;
 				margin-left: 20%;
 				color: white;
 				transition: transform 2.0s;
-				&.last-element--active{
+				&--active{
 					transform: rotate(30deg) scale(.5) translateX(-14px);
+
 				}
 			}
 		}
@@ -94,7 +96,6 @@
 		&-item{
 			margin-bottom: 50px;
 			font-size: 30px;
-			// width: 148px;
 			width: 100%;
 			@include large{
 				margin-bottom: 0;
@@ -102,7 +103,6 @@
 			}
 			& > a {
 				display: block;
-				// text-align: center;
 				text-decoration: none;
 				width: 100%;
 			}
@@ -114,37 +114,7 @@
 			@include large{
 			align-items: center;
 			}
-			& > span {
-				display: flex;
-				width: 30px;
-				margin-top: 8px;
-				justify-content: center;
-				// position: absolute;
-				// margin-left: 100px;
-			@include large{
-				position: unset;
-				margin-left: 0;
-			}
-			& > span {
-				border: 1px solid;
-				margin-right: 5px;
-				height: 15px;
-				max-width: 100%;
-				&:first-child{
-						transform: rotate(-34deg);
-					&.leftArrow--active{
-						transform: rotate(34deg);
-					}
-				}
-				&:last-child{
-					transform: rotate(34deg);
-					&.rightArrow--active{
-						transform: rotate(-34deg);
-					}
-				}
-			}
-			}
-	}
+	  }
 }
 	&__dropdown-list{
 		will-change: height;
@@ -168,6 +138,35 @@
 				text-decoration: none;
 			}
 		}
+	}
+	&__arrow-container{
+		display: flex;
+		width: 30px;
+		margin-top: 8px;
+		justify-content: center;
+
+	@include large{
+		position: unset;
+		margin-left: 0;
+	}
+	&-item{
+		border: 1px solid;
+		margin-right: 5px;
+		height: 15px;
+		max-width: 100%;
+		&:first-child{
+				transform: rotate(-34deg);
+			&.leftArrow--active{
+				transform: rotate(34deg);
+			}
+		}
+		&:last-child{
+			transform: rotate(34deg);
+			&.rightArrow--active{
+				transform: rotate(-34deg);
+			}
+		}
+	}
 	}
 }
 
