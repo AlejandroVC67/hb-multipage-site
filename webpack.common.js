@@ -1,6 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -30,12 +32,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new StyleLintPlugin({}),
+    new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    }),
-    new HtmlWebpackPlugin({
-      title: 'production'
     })
   ]
 }
