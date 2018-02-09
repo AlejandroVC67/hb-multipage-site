@@ -5,6 +5,8 @@
 	height: 7vh;
 	background-color: $navBarColor;
 	display: flex;
+	position: absolute;
+	z-index: 1;
 	cursor: pointer;
 	&__menu{
 		width: 15%;
@@ -102,6 +104,7 @@
 			@include large{
 				margin-bottom: 0;
 				font-size: 20px;
+				margin-left: 20px;
 			}
 			&-element{
 				display: block;
