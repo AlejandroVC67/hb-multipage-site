@@ -5,7 +5,6 @@ export class Hero {
   constructor (node) {
     this.node = node
     this.generateHTML()
-    console.log(data)
   }
 
   generateHTML () {
