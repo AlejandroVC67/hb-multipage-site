@@ -5,7 +5,6 @@
 	height: 7vh;
 	background-color: $navBarColor;
 	display: flex;
-	position: absolute;
 	z-index: 1;
 	cursor: pointer;
 	&__menu{
@@ -73,6 +72,7 @@
 		min-height: 94vh;
     justify-content: center;
 		align-items: center;
+		z-index: 1;
 		&--active{
 			margin-left: 0;
 		}

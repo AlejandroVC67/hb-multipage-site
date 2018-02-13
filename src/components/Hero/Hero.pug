@@ -1,11 +1,11 @@
-
+div.hero__wrapper
+  div.hero__information-container 
+    h1.hero__information-container-header #{header}
+    p.hero__information-container-description #{description}
+    button.hero__information-container-button #{cta.label}
 picture.hero__picture
   source(media="(min-width: 320px) and (max-width: 639px)", srcset=images.small.url)
   source(media="(min-width: 640px) and (max-width: 1023px)", srcset=images.medium.url)
   source(media="(min-width: 1024px)", srcset=images.large.url)
   img( alt="This is a random image", srcset=images.small.url).hero__image
-div.hero__information-container 
-  h1.hero__information-container-header #{header}
-  p.hero__information-container-description #{description}
-  button.hero__information-container-button #{cta.label}
-  
+
