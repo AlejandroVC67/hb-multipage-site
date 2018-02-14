@@ -17,7 +17,6 @@ export class NavBar {
   }
 
   generateHTML () {
-    console.log(data[0])
     this.node.innerHTML = template(data[1])
   }
 
