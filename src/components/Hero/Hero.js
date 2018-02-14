@@ -1,6 +1,6 @@
 import './_Hero.scss'
 import template from './Hero.pug'
-import data from '../../Data/heroData.json'
+import data from '../../Data/data.json'
 export class Hero {
   constructor (node) {
     this.node = node
@@ -8,6 +8,6 @@ export class Hero {
   }
 
   generateHTML () {
-    this.node.innerHTML = template(data)
+    this.node.innerHTML = template(data[0])
   }
 }
