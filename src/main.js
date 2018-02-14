@@ -2,8 +2,10 @@
 import './components/common/main.scss'
 
 import { NavBar } from './components/NavBar/NavBar.js'
-import { Hero } from './components/Hero/Hero.js'
+// import { Hero } from './components/Hero/Hero.js'
+import { DecorativeHero } from './components/DecorativeHero/DecorativeHero.js'
 /* eslint-disable */
 new NavBar(document.querySelector('.nav-bar'))
-new Hero(document.querySelector('.hero'))
+new DecorativeHero(document.querySelector('.hero'))
+// new Hero(document.querySelector('.hero'))
 /* eslint-enable */
