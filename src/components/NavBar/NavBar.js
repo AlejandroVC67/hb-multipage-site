@@ -17,7 +17,7 @@ export class NavBar {
   }
 
   generateHTML () {
-    this.node.innerHTML = template(data)
+    this.node.innerHTML = template(data[1])
   }
 
   static get states () {
