@@ -6,6 +6,6 @@ import { NavBar } from './components/NavBar/NavBar.js'
 import { DecorativeHero } from './components/DecorativeHero/DecorativeHero.js'
 /* eslint-disable */
 new NavBar(document.querySelector('.nav-bar'))
-new DecorativeHero(document.querySelector('.hero'))
+new DecorativeHero(document.querySelector('.decorative-hero'))
 // new Hero(document.querySelector('.hero'))
 /* eslint-enable */
