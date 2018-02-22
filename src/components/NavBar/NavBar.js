@@ -17,7 +17,8 @@ export class NavBar {
   }
 
   generateHTML () {
-    this.node.innerHTML = template(data[1])
+    console.log(data)
+    this.node.innerHTML = template(data.NavBar)
   }
 
   static get states () {

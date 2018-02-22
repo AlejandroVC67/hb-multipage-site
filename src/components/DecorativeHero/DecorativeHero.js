@@ -8,6 +8,6 @@ export class DecorativeHero {
   }
 
   generateHTML () {
-    this.node.innerHTML = template(data[2])
+    this.node.innerHTML = template(data.DecorativeHero)
   }
 }

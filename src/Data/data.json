@@ -1,4 +1,4 @@
-[
+{"Hero":
   {
     "header": "I'm just a header",
     "description": "And i'm a simple description",
@@ -20,7 +20,7 @@
         "description": "This is the large image description"
       }
     }
-  },
+  },"NavBar":
   {
   "logo": {
     "img": "Compnay Logo",
@@ -87,7 +87,7 @@
       ]
     }
   ]
-},
+},"DecorativeHero":
 {
   "header": "I'm just a header",
   "description": "And i'm a simple description",
@@ -107,7 +107,4 @@
     }
   }
 }
-]
-
-
-
+}
