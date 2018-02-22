@@ -1,4 +1,5 @@
-{
+{"NavBar":
+  {
   "logo": {
     "img": "Compnay Logo",
     "link": "https://png.icons8.com/metro/1600/batman-new.png"
@@ -62,32 +63,7 @@
           "href": "casita2.html"
         }
       ]
-    },
-    {
-      "label": "Other Pages",
-      "links": [
-        {
-          "label": "Random page",
-          "href": "casita1.html"
-        },
-        {
-          "label": "Random page",
-          "href": "casita2.html"
-        }
-      ]
-    },
-    {
-      "label": "Other Pages",
-      "links": [
-        {
-          "label": "Random page",
-          "href": "casita1.html"
-        },
-        {
-          "label": "Random page",
-          "href": "casita2.html"
-        }
-      ]
     }
   ]
+}
 }
