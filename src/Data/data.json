@@ -1,4 +1,4 @@
-[
+{"hero":
   {
     "header": "I'm just a header",
     "description": "And i'm a simple description",
@@ -16,16 +16,16 @@
         "description": "This is the midium image description"
       },
       "large": {
-        "url": "http://markinternational.info/data/out/768/225789461-nature-wallpaper-1920x1080.jpg",
+        "url": "https://s-media-cache-ak0.pinimg.com/originals/3f/c6/f8/3fc6f8ee691c9baa52d10e60b3e9e3a6.jpg",
         "description": "This is the large image description"
       }
     }
-  },
+  },"navbar":
   {
-  "logo": {
-    "img": "Compnay Logo",
-    "link": "https://png.icons8.com/metro/1600/batman-new.png"
-  },
+    "logo": {
+      "img": "https://png.icons8.com/metro/1600/batman-new.png",
+      "link": "/"
+    },
   "links": [
     {
       "label": "Home",
@@ -88,9 +88,4 @@
     }
   ]
 }
-
-
-]
-
-
-
+}
