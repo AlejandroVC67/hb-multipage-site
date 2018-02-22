@@ -8,6 +8,6 @@ export class Hero {
   }
 
   generateHTML () {
-    this.node.innerHTML = template(data.Hero)
+    this.node.innerHTML = template(data.hero)
   }
 }
