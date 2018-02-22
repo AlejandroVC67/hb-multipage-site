@@ -3,8 +3,9 @@ span.nav-bar__menu
         div.nav-bar__menu__button-first
         div.nav-bar__menu__button-middle      
         div.nav-bar__menu__button-last
-div.nav-bar__image-container
-  img.nav-bar__image(src=logo.link, alt=logo.img)
+div.nav-bar__image__container
+  a.nav-bar__image-link(href=logo.link)
+    img.nav-bar__image(src=logo.img, alt='company logo')
 ul.nav-bar__list
   each element in links
     if Object.keys(element).includes('href')
@@ -21,5 +22,3 @@ ul.nav-bar__list
           span.nav-bar__arrow-container
             span.nav-bar__arrow-container-item
             span.nav-bar__arrow-container-item
-
-

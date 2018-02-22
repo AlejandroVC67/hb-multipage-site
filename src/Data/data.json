@@ -22,10 +22,10 @@
     }
   },"navbar":
   {
-  "logo": {
-    "img": "Compnay Logo",
-    "link": "https://png.icons8.com/metro/1600/batman-new.png"
-  },
+    "logo": {
+      "img": "https://png.icons8.com/metro/1600/batman-new.png",
+      "link": "/"
+    },
   "links": [
     {
       "label": "Home",
