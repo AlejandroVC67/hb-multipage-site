@@ -1,5 +1,5 @@
-{"Hero":
-  {
+{
+  "hero":{
     "header": "I'm just a header",
     "description": "And i'm a simple description",
     "cta": {
@@ -20,11 +20,11 @@
         "description": "This is the large image description"
       }
     }
-  },"NavBar":
-  {
+  },
+  "navbar":{
   "logo": {
-    "img": "Compnay Logo",
-    "link": "https://png.icons8.com/metro/1600/batman-new.png"
+    "img": "https://png.icons8.com/metro/1600/batman-new.png",
+    "link": "/"
   },
   "links": [
     {
@@ -87,8 +87,8 @@
       ]
     }
   ]
-},"DecorativeHero":
-{
+},
+"decorativehero":{
   "header": "I'm just a header",
   "description": "And i'm a simple description",
   "cta": {
