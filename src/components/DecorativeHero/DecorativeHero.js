@@ -7,8 +7,13 @@ export class DecorativeHero {
   constructor (node) {
     this.node = node
     this.generateHTML()
+    this.images = {}
+    this.images.small = data.decorativehero.images.small.url
+    this.images.medium = data.decorativehero.images.medium.url
+    this.images.large = data.decorativehero.images.large.url
+    this.decorativeHero = document.querySelector('.decorative-hero__picture')
     /* eslint-disable */    
-    new WindowListener(this.addHeroStyles)
+    this.windowListener = new WindowListener(this.addHeroStyles.bind(this))
     /* eslint-enable */
   }
   generateHTML () {
@@ -16,18 +21,12 @@ export class DecorativeHero {
   }
 
   addHeroStyles (breakpoint) {
-    this.images = {}
-    this.images.small = data.decorativehero.images.small.url
-    this.images.medium = data.decorativehero.images.medium.url
-    this.images.large = data.decorativehero.images.large.url
-    this.decorativeHero = document.querySelector('.decorative-hero__picture')
-
     if (breakpoint === 'small') {
-      this.decorativeHero.setAttribute('style', `background-image: url(${this.images.small})`)
+      this.decorativeHero.style.backgroundImage = `url(${this.images.small})`
     } else if (breakpoint === 'medium') {
-      this.decorativeHero.setAttribute('style', `background-image: url(${this.images.medium})`)
+      this.decorativeHero.style.backgroundImage = `url(${this.images.medium})`
     } else if (breakpoint === 'large') {
-      this.decorativeHero.setAttribute('style', `background-image: url(${this.images.large})`)
+      this.decorativeHero.style.backgroundImage = `url(${this.images.large})`
     }
   }
 }

@@ -2,14 +2,19 @@ export class WindowListener {
   constructor (callback) {
     this.callback = callback
     this.elements = {}
+    this.smallStart = 320
+    this.smallEnd = 639
+    this.mediumStart = 640
+    this.mediumEnd = 1023
+    this.largeStart = 1024
     this.initVariables()
     this.setEvents(this.callback)
   }
 
   initVariables () {
-    this.elements.small = window.matchMedia('screen and (min-width: 320px) and (max-width: 630px) ')
-    this.elements.medium = window.matchMedia('screen and (min-width: 640px) and (max-width: 1023px)')
-    this.elements.large = window.matchMedia('screen and (min-width: 1024px)')
+    this.elements.small = window.matchMedia(`screen and (min-width: ${this.smallStart}px) and (max-width: ${this.smallEnd}px) `)
+    this.elements.medium = window.matchMedia(`screen and (min-width: ${this.mediumStart}px) and (max-width: ${this.mediumEnd}px)`)
+    this.elements.large = window.matchMedia(`screen and (min-width: ${this.largeStart}px)`)
   }
 
   setEvents (cb) {
@@ -19,11 +24,11 @@ export class WindowListener {
   }
 
   getCurrentWidth () {
-    if (this.elements.small.matches && window.innerWidth >= 320 && window.innerWidth < 639) {
+    if (this.elements.small.matches && window.innerWidth >= this.smallStart && window.innerWidth < this.mediumStart) {
       this.callback('small')
-    } else if (this.elements.medium.matches && window.innerWidth >= 640 && window.innerWidth < 1024) {
+    } else if (this.elements.medium.matches && window.innerWidth >= this.mediumStart && window.innerWidth < this.largeStart) {
       this.callback('medium')
-    } else if (this.elements.large.matches && window.innerWidth >= 1024) {
+    } else if (this.elements.large.matches && window.innerWidth >= this.largeStart) {
       this.callback('large')
     }
   }
