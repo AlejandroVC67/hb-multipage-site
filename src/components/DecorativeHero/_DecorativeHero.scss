@@ -13,13 +13,13 @@
 		background-repeat: no-repeat;
 		position: absolute;
 		top: 0;
-		background-image: url('https://wallpapercave.com/wp/Fe3XMh0.jpg');
-		@include medium {
-		background-image: url('http://i.imgur.com/SkH0dnQ.jpg');	
-		}
-		@include large {
-			background-image: url('http://www.techagesite.com/cool-desktop/wallpapers-hd-cool-field-nature-1920x1080.jpg');	
-		}
+		// background-image: url('https://wallpapercave.com/wp/Fe3XMh0.jpg');
+		// @include medium {
+		// background-image: url('http://i.imgur.com/SkH0dnQ.jpg');	
+		// }
+		// @include large {
+		// 	background-image: url('http://www.techagesite.com/cool-desktop/wallpapers-hd-cool-field-nature-1920x1080.jpg');	
+		// }
 	}
 	&__information-container{
 		width: 100%;
