@@ -1,26 +1,4 @@
-{"hero":
-  {
-    "header": "I'm just a header",
-    "description": "And i'm a simple description",
-    "cta": {
-      "label": "Click me please (: ",
-      "url": "www.hiii.com"
-    },
-    "images": {
-      "small": {
-        "url": "https://wallpapercave.com/wp/Fe3XMh0.jpg",
-        "description": "This is the small image description"
-      },
-      "medium": {
-        "url": "http://i.imgur.com/SkH0dnQ.jpg",
-        "description": "This is the midium image description"
-      },
-      "large": {
-        "url": "https://s-media-cache-ak0.pinimg.com/originals/3f/c6/f8/3fc6f8ee691c9baa52d10e60b3e9e3a6.jpg",
-        "description": "This is the large image description"
-      }
-    }
-  },"navbar":
+{"navbar":
   {
     "logo": {
       "img": "https://png.icons8.com/metro/1600/batman-new.png",
