@@ -21,9 +21,6 @@ export class DecorativeHero {
     this.images.medium = data.decorativehero.images.medium.url
     this.images.large = data.decorativehero.images.large.url
     this.decorativeHero = document.querySelector('.decorative-hero__picture')
-    console.log(breakpoint)
-    console.log(this.decorativeHero)
-    console.log(this.images)
 
     if (breakpoint === 'small') {
       this.decorativeHero.setAttribute('style', `background-image: url(${this.images.small})`)
