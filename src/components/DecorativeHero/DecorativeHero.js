@@ -12,9 +12,7 @@ export class DecorativeHero {
     this.images.medium = data.decorativehero.images.medium.url
     this.images.large = data.decorativehero.images.large.url
     this.decorativeHero = document.querySelector('.decorative-hero__picture')
-    /* eslint-disable */    
     this.windowListener = new WindowListener(this.addHeroStyles.bind(this))
-    /* eslint-enable */
   }
   generateHTML () {
     this.node.innerHTML = template(data.decorativehero)
