@@ -1,9 +1,31 @@
-{"navbar":
-  {
-    "logo": {
-      "img": "https://png.icons8.com/metro/1600/batman-new.png",
-      "link": "/"
+{
+  "hero":{
+    "header": "I'm just a header",
+    "description": "And i'm a simple description",
+    "cta": {
+      "label": "Click me please (: ",
+      "url": "www.hiii.com"
     },
+    "images": {
+      "small": {
+        "url": "https://wallpapercave.com/wp/Fe3XMh0.jpg",
+        "description": "This is the small image description"
+      },
+      "medium": {
+        "url": "http://i.imgur.com/SkH0dnQ.jpg",
+        "description": "This is the midium image description"
+      },
+      "large": {
+        "url": "http://markinternational.info/data/out/768/225789461-nature-wallpaper-1920x1080.jpg",
+        "description": "This is the large image description"
+      }
+    }
+  },
+  "navbar":{
+  "logo": {
+    "img": "https://png.icons8.com/metro/1600/batman-new.png",
+    "link": "/"
+  },
   "links": [
     {
       "label": "Home",
@@ -65,5 +87,24 @@
       ]
     }
   ]
+},
+"decorativehero":{
+  "header": "I'm just a header",
+  "description": "And i'm a simple description",
+  "cta": {
+    "label": "Click me please (: ",
+    "url": "www.hiii.com"
+  },
+  "images": {
+    "small": {
+      "url": "https://wallpapercave.com/wp/Fe3XMh0.jpg"
+    },
+    "medium": {
+      "url": "http://i.imgur.com/SkH0dnQ.jpg"
+    },
+    "large": {
+      "url": "http://www.vactualpapers.com/web/wallpapers/beautiful-sights-and-scenes-of-norway-world-travel-hd-wallpaper-30/1920x1080.jpg"
+    }
+  }
 }
 }
